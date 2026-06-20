@@ -5,6 +5,10 @@ import com.proyecto_frutos_secos.shipping_service.service.DespachoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +19,19 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "Despachos", description = "Seguimiento logístico de órdenes")
 public class DespachoController {
     private final DespachoService despachoService;
+
+    @GetMapping
+    @Operation(summary = "Listar todos los despachos")
+    public ResponseEntity<List<Despacho>> listarTodo(){
+        return ResponseEntity.ok(despachoService.listarDespachos());
+    }
+
+    @GetMapping("/{id}")
+    @Operation(summary = "Buscar despacho por ID")
+    public ResponseEntity<Optional<Despacho>> buscarPorId(@PathVariable Long id){
+        return ResponseEntity.ok(despachoService.buscarPorId(id));
+    }
+
 
     @PostMapping
     @Operation(summary = "Generar orden de despacho para una venta")

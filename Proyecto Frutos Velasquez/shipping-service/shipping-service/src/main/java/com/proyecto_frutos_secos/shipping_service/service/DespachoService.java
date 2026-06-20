@@ -6,11 +6,21 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.Random;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class DespachoService {
     private final DespachoRepository despachoRepository;
+
+    public List<Despacho> listarDespachos(){
+        return despachoRepository.findAll();
+    }
+
+    public Optional<Despacho> buscarPorId(Long id){
+        return despachoRepository.findById(id);
+    }
 
     public Despacho registrarDespacho(Despacho despacho) {
         despacho.setEstadoDespacho("PREPARACION");
