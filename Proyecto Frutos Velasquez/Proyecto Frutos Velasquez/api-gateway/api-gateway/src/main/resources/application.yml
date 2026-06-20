@@ -1,0 +1,68 @@
+server:
+  port: 9090 # El puerto del guardia de seguridad
+
+jwt:
+  secret: "493358340235739058340598340598340598340598340598"
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+
+        #0. RUTA AUTH
+        - id: auth-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/auth/**
+        # 1. Ruta para el Catálogo
+        - id: catalog-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/v1/catalogo/**
+
+        # 2. Ruta para el Inventario
+        - id: inventory-service
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/inventario/**
+          filters:
+            - AuthenticationFilter
+
+        # 3. Ruta para Ventas
+        - id: sales-service
+          uri: http://localhost:8086
+          predicates:
+            - Path=/api/v1/ventas/**
+          filters:
+            - AuthenticationFilter
+
+        # 4. Ruta para Compras
+        - id: purchasing-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/v1/compras/**
+          filters:
+            - AuthenticationFilter
+
+        # 5. Ruta para Analítica
+        - id: analytics-service
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/v1/analitica/**
+          filters:
+            - AuthenticationFilter
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+#AMONONAR SWAGGER CON ESTO 
+#springdoc:
+#  swagger-ui:
+#    urls:
+#      - name: Servicio de Catálogo
+#        url: /api/v1/catalogo/v3/api-docs
+#      - name: Servicio de Inventario
+#        url: /api/v1/inventario/v3/api-docs 

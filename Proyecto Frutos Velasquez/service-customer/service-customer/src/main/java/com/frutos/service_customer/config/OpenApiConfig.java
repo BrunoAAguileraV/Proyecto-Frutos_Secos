@@ -11,6 +11,6 @@ public class OpenApiConfig {
         return new OpenAPI().info(new Info()
                 .title("API Frutos Velásquez - Clientes")
                 .version("1.0")
-                .description("Microservicio de cupones y descuentos"));
+                .description("Microservicio de clientes"));
     }
 }
