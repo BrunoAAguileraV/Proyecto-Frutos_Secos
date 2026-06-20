@@ -25,4 +25,8 @@ public class PromoService {
         promo.setCodigo(promo.getCodigo().toUpperCase());
         return promoRepository.save(promo);
     }
+    
+    public void eliminarPromocion(Long id) {
+        promoRepository.deleteById(id);
+    }
 }

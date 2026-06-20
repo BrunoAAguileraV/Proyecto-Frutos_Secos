@@ -24,4 +24,7 @@ public class PagoService {
         }
         return pagoRepository.save(pago);
     }
+    public void eliminarPago(Long id) {
+        pagoRepository.deleteById(id);
+    }
 }

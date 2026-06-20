@@ -25,4 +25,11 @@ public class DespachoService {
         d.setEstadoDespacho(nuevoEstado);
         return despachoRepository.save(d);
     }
+
+    public void eliminarDespacho(Long id) {
+        if (!despachoRepository.existsById(id)) {
+            throw new RuntimeException("Error: El despacho con ID " + id + " no existe.");
+        }
+        despachoRepository.deleteById(id);
+    }
 }

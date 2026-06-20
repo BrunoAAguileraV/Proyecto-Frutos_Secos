@@ -27,4 +27,11 @@ public class DespachoController {
     public ResponseEntity<Despacho> actualizar(@PathVariable Long id, @RequestParam String estado) {
         return ResponseEntity.ok(despachoService.actualizarEstado(id, estado));
     }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Eliminar un registro de despacho por ID")
+    public ResponseEntity<Void> eliminarDespacho(@PathVariable Long id) {
+        despachoService.eliminarDespacho(id);
+        return ResponseEntity.noContent().build();
+}
 }

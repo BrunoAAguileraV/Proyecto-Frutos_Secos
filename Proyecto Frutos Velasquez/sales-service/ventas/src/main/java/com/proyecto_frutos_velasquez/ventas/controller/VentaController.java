@@ -3,6 +3,7 @@ package com.proyecto_frutos_velasquez.ventas.controller;
 import com.proyecto_frutos_velasquez.ventas.model.Venta;
 import com.proyecto_frutos_velasquez.ventas.service.VentaService;
 
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,4 +47,10 @@ public class VentaController {
         // mandamos un 0.0 de forma segura.
         return ResponseEntity.ok(total != null ? total : 0.0);
     }
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Eliminar una venta por ID")
+    public ResponseEntity<Void> eliminarVenta(@PathVariable Long id) {
+        ventaService.eliminarVenta(id);
+        return ResponseEntity.noContent().build(); 
+}
 }

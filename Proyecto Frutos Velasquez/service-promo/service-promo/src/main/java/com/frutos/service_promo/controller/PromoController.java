@@ -41,4 +41,11 @@ public class PromoController {
         Promo nuevaPromo = promoService.guardar(promo);
         return new ResponseEntity<>(nuevaPromo, HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Eliminar un código de promoción por ID")
+    public ResponseEntity<Void> eliminarPromocion(@PathVariable Long id) {
+        promoService.eliminarPromocion(id);
+        return ResponseEntity.noContent().build();
+    }
 }

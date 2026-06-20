@@ -21,4 +21,11 @@ public class PagoController {
     public ResponseEntity<Pago> procesar(@RequestBody Pago pago) {
         return ResponseEntity.ok(pagoService.procesarPago(pago));
     }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Eliminar un registro de pago por ID")
+    public ResponseEntity<Void> eliminarPago(@PathVariable Long id) {
+        pagoService.eliminarPago(id);
+        return ResponseEntity.noContent().build();
+}
 }

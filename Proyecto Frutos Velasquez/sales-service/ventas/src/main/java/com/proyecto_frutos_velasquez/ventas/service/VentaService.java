@@ -57,4 +57,8 @@ public class VentaService {
         // Este método busca desde las 00:00:00 hasta las 23:59:59 del día solicitado
         return ventaRepository.sumarTotalPorRango(fecha.atStartOfDay(), fecha.atTime(LocalTime.MAX));
     }
+
+    public void eliminarVenta(Long id) {
+        ventaRepository.deleteById(id);
+    }
 }

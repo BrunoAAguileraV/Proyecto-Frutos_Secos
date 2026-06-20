@@ -49,4 +49,11 @@ public class CustomerController {
         Customer clienteGuardado = customerService.guardarOActualizar(customer);
         return new ResponseEntity<>(clienteGuardado, HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Eliminar un cliente de la base de datos por ID")
+    public ResponseEntity<Void> eliminarCliente(@PathVariable Long id) {
+        customerService.eliminarCliente(id);
+        return ResponseEntity.noContent().build();
+}
 }
