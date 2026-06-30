@@ -1,0 +1,244 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AnaliticasApplication<analiticas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.analiticas.AnaliticasApplication",
+            "projectName": "analiticas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiGatewayApplication<api-gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.api_gateway.ApiGatewayApplication",
+            "projectName": "api-gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CatalogoApplication<catalogo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.catalogo.CatalogoApplication",
+            "projectName": "catalogo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ComprasApplication<compras>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.compras.ComprasApplication",
+            "projectName": "compras",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-InventarioApplication<inventario>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.inventario.InventarioApplication",
+            "projectName": "inventario",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PaymentServiceApplication<payment-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.payment_service.PaymentServiceApplication",
+            "projectName": "payment-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServiceAuthApplication<service-auth>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.service_auth.ServiceAuthApplication",
+            "projectName": "service-auth",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServiceCustomerApplication<service-customer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.frutos.service_customer.ServiceCustomerApplication",
+            "projectName": "service-customer",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServiceNotificationApplication<service-notification>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.frutos.service_notification.ServiceNotificationApplication",
+            "projectName": "service-notification",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServicePromoApplication<service-promo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.frutos.service_promo.ServicePromoApplication",
+            "projectName": "service-promo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ShippingServiceApplication<shipping-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_secos.shipping_service.ShippingServiceApplication",
+            "projectName": "shipping-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-VentasApplication<ventas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.ventas.VentasApplication",
+            "projectName": "ventas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServiceCustomerApplication<com.frutos-service-customer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.frutos.service_customer.ServiceCustomerApplication",
+            "projectName": "com.frutos-service-customer",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServiceNotificationApplication<com.frutos-service-notification>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.frutos.service_notification.ServiceNotificationApplication",
+            "projectName": "com.frutos-service-notification",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServicePromoApplication<com.frutos-service-promo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.frutos.service_promo.ServicePromoApplication",
+            "projectName": "com.frutos-service-promo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ShippingServiceApplication<com.proyecto_frutos_secos-shipping-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_secos.shipping_service.ShippingServiceApplication",
+            "projectName": "com.proyecto_frutos_secos-shipping-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AnaliticasApplication<com.proyecto_frutos_velasquez-analiticas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.analiticas.AnaliticasApplication",
+            "projectName": "com.proyecto_frutos_velasquez-analiticas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiGatewayApplication<com.proyecto_frutos_velasquez-api-gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.api_gateway.ApiGatewayApplication",
+            "projectName": "com.proyecto_frutos_velasquez-api-gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CatalogoApplication<com.proyecto_frutos_velasquez-catalogo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.catalogo.CatalogoApplication",
+            "projectName": "com.proyecto_frutos_velasquez-catalogo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ComprasApplication<com.proyecto_frutos_velasquez-compras>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.compras.ComprasApplication",
+            "projectName": "com.proyecto_frutos_velasquez-compras",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-InventarioApplication<com.proyecto_frutos_velasquez-inventario>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.inventario.InventarioApplication",
+            "projectName": "com.proyecto_frutos_velasquez-inventario",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PaymentServiceApplication<com.proyecto_frutos_velasquez-payment-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.payment_service.PaymentServiceApplication",
+            "projectName": "com.proyecto_frutos_velasquez-payment-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServiceAuthApplication<com.proyecto_frutos_velasquez-service-auth>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.service_auth.ServiceAuthApplication",
+            "projectName": "com.proyecto_frutos_velasquez-service-auth",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-VentasApplication<com.proyecto_frutos_velasquez-ventas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto_frutos_velasquez.ventas.VentasApplication",
+            "projectName": "com.proyecto_frutos_velasquez-ventas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
