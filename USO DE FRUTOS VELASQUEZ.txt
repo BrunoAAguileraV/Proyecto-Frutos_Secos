@@ -1,0 +1,89 @@
+USO DE FRUTOS VELASQUEZ
+
+EN CASO DE FALLA SWAGGER
+swagger-ui:
+    path: /swagger-ui/index.html
+    use-root-path: true
+
+http://localhost:9090/swagger-ui/index.html
+
+CREATE DATABASE db_seguridad;
+USE db_seguridad;
+
+CREATE TABLE roles (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre_rol VARCHAR(50) NOT NULL UNIQUE
+);
+
+INSERT INTO roles (nombre_rol) VALUES ('CLIENTE'), ('VENDEDOR'), ('BODEGUERO'), ('ADMINISTRADOR');
+
+CREAR
+URL: http://localhost:9090/auth/registrar
+
+{
+  "nombreUsuario": "bruno_admin",
+  "contrasena": "claveSegura123",
+  "correo": "admin@frutosvelasquez.cl",
+  "roles": [
+    { "id": 4 }
+  ]
+}
+
+LOGIN
+URL: http://localhost:9090/auth/login
+
+{
+  "nombreUsuario": "bruno_admin",
+  "password": "claveSegura123"
+}
+
+CON TOKEN GENERADO USARLO ES AUTH PARA TENER PERMISOS
+EJEMPLO DE TOKEN:
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnVub19hZG1pbiIsInJvbGVzIjpbIkFETUlOSVNUUkFET1IiXSwiaWF0IjoxNzgyMDE2NDY2LCJleHAiOjE3ODIwMjM2NjZ9.gdFslZVtUYrDHkRFFqJ-Qj2Z1rmQkU5LdMrm8ysp5CI
+
+MICROSERVICIO DE EJEMPLO A USAR
+
+SHIPPING
+
+POST
+URL:http://localhost:9090/api/v1/shippings
+
+{
+  "ventaId": 1,
+  "direccionDespacho": "Av. Macul 1234, Macul",
+  "estado": "PREPARANDO",
+  "fechaEstimada": "2026-06-25"
+}
+
+LISTAR DESPACHO
+
+GET
+URL:http://localhost:9090/api/v1/shippings
+
+
+BUSCAR POR ID 
+
+GET{id}
+URL:http://localhost:9090/api/v1/shippings/1
+
+MODIFICAR DESPACHO
+
+PUT{id}
+URL:http://localhost:9090/api/v1/shippings/1/estado?estado=EN_TRANSITO
+
+{
+  "ventaId": 1,
+  "direccionDespacho": "Av. Macul 1234, Macul",
+  "estado": "EN RUTA",
+  "fechaEstimada": "2026-06-25"
+}
+
+BORRAR DESPACHO
+
+DELETE{id}
+URL:http://localhost:9090/api/v1/shippings/1
+
+
+
+
+

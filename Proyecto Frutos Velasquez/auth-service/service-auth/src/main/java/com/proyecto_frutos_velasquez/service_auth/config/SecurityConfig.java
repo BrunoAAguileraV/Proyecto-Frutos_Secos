@@ -16,8 +16,16 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
+<<<<<<< HEAD
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html", "/error").permitAll()
                         .requestMatchers("/auth/**").permitAll()
+=======
+                        // 1. Pase VIP para Swagger y su documentación
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html", "/error").permitAll()
+                        // 2. Pase VIP para tus endpoints de login/registro
+                        .requestMatchers("/auth/**").permitAll()
+                        // 3. Todo lo demás requiere token
+>>>>>>> 471ed79a3e34b27862e58d2241c8730418144e8d
                         .anyRequest().authenticated()
                 ).build();
     }
